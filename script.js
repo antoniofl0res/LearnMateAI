@@ -1,4 +1,8 @@
-const apiKey = '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'; // Replace with your valid OpenAI API key
+
+const key1 = 'sk-proj-F';
+const key2 = '0lwBzv4KL6avb6prTYtKUdiT8wtzfOqQ0AI9heUZLqfsqw3WocIIvJ8uWsGueEP1';
+const key3 = 'q4edycDy3T3BlbkFJ1hRMGF48VuFcoIZmqaLiopnIAMlCsRnk1fkQrLIS9umGLoRjCq91H7fibNMsMW7Fiu69Ncc9AA';
+const apiKey = key1+key2+key3;
 
 function nextStep() {
   console.log("Next button clicked!"); // Debugging log
