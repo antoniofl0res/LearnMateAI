@@ -84,3 +84,27 @@ Provide 3 modules with clear titles and a list describing key themes to be cover
     document.getElementById('loading').classList.add('hidden');
   }
 }
+
+	// Download output
+function downloadCurriculum() {
+  const curriculumText = document.getElementById('curriculumOutput').innerText;
+  const blob = new Blob([curriculumText], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'curriculum.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+	//reset form
+function resetForm() {
+  document.getElementById('step3').classList.add('hidden');
+  document.getElementById('step1').classList.remove('hidden');
+  document.getElementById('topicInput').value = '';
+  document.getElementById('goalInput').value = '';
+  document.getElementById('knowledgeLevel').value = 'beginner';
+  document.getElementById('learningStyle').value = 'videos';
+}
