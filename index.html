@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalized Learning Companion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Spinner (initially hidden) -->
+  <div id="loading" class="hidden">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="container">
+    <h1>Personalized Learning Companion</h1>
+    <div id="step1">
+      <h2>Step 1: Enter a Topic</h2>
+      <input type="text" id="topicInput" placeholder="e.g., Python Programming">
+      <button onclick="nextStep()">Next</button>
+    </div>
+    <div id="step2" class="hidden">
+      <h2>Step 2: Answer a Few Questions</h2>
+      <form id="questionsForm">
+        <label>What’s your learning goal?</label>
+        <input type="text" id="goalInput" placeholder="e.g., Build a web app">
+        <label>What’s your current knowledge level?</label>
+        <select id="knowledgeLevel">
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+        <label>Preferred learning style?</label>
+        <select id="learningStyle">
+          <option value="videos">Videos</option>
+          <option value="text">Text</option>
+        </select>
+        <button type="button" onclick="generateCurriculum()">Generate Curriculum</button>
+      </form>
+    </div>
+    <div id="step3" class="hidden">
+      <h2>Step 3: Your Mini-Curriculum</h2>
+      <div id="curriculumOutput" class="curriculum"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <!-- Debugging script -->
+  <script>
+    // Check if the spinner is hidden on page load
+    window.onload = function() {
+      const spinner = document.getElementById('loading');
+      console.log('Spinner hidden on load:', spinner.classList.contains('hidden'));
+    };
+  </script>
+</body>
+</html>
