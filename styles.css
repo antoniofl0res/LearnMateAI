@@ -42,13 +42,17 @@ h1, h2 {
 
 h1 {
   font-size: 2.5rem;
-  margin-bottom: 15px; /* Reduced margin */
+  margin-bottom: 10px; /* Reduced margin for tighter spacing */
   color: #007bff;
+  text-align: center;
 }
 
 h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px; /* Reduced margin */
+  font-size: 1.5rem;
+  margin-bottom: 20px; /* Adjusted margin for better spacing */
+  color: #555;
+  text-align: center;
+  font-weight: normal; /* Make the subtitle less bold */
 }
 
 input, select, button {
