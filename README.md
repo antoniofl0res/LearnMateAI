@@ -119,20 +119,19 @@ Contributions are welcome! Here’s how you can contribute:
 ---
 
 ## **License**
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under CC. See the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## **Acknowledgments**
 - **OpenAI**: For providing the GPT API used in this project.
-- **Netlify/Vercel/Render**: For hosting and deployment support.
 
 ---
 
 ## **Contact**
 For questions or feedback, feel free to reach out:  
 - **Email**: your-email@example.com  
-- **GitHub**: [your-username](https://github.com/your-username)  
+- **GitHub**: [antoniofl0res](https://github.com/antoniofl0res)  
 
 ---
 
