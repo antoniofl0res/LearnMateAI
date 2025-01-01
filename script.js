@@ -49,20 +49,20 @@ Provide 3 modules with clear titles and a list describing key themes to be cover
 
     // Format the AI-generated curriculum while preserving the boolean string
     const formattedCurriculum = curriculum
-      .split('\n') // Split the text into lines
-      .map(line => {
-        if (line.startsWith('Module')) {
-          return `<h4>${line}</h4>`; // Format module titles as headings
-        } else if (line.startsWith('-')) {
-          return `<li>${line.slice(1).trim()}</li>`; // Format bullet points as list items
-        } else if (line.startsWith('Suggested search:')) {
-          // Preserve the boolean string format
-          return `<p><strong>${line}</strong></p>`;
-        } else {
-          return `<p>${line}</p>`; // Format other lines as paragraphs
-        }
-      })
-      .join('\n'); // Combine the lines back with line breaks
+  .split('\n') // Split the text into lines
+  .map(line => {
+    if (line.startsWith('Module')) {
+      return `<h4>${line}</h4>`; // Format module titles as headings
+    } else if (line.startsWith('-')) {
+      return `<li>${line.slice(1).trim()}</li>`; // Format bullet points as list items
+    } else if (line.startsWith('Suggested search:')) {
+      // Return the boolean string in its original format
+      return line; // No additional formatting
+    } else {
+      return `<p>${line}</p>`; // Format other lines as paragraphs
+    }
+  })
+  .join('\n'); // Combine the lines back with line breaks
 
     // Display the formatted curriculum
     document.getElementById('curriculumOutput').innerHTML = `
