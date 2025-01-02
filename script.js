@@ -119,3 +119,17 @@ function hideHelp() {
   document.getElementById('helpPopup').classList.add('hidden');
 }
 
+// Toggle the help pop-up
+function toggleHelp() {
+  const helpPopup = document.getElementById('helpPopup');
+  helpPopup.classList.toggle('hidden');
+}
+
+// Close the pop-up when clicking outside of it
+document.addEventListener('click', function(event) {
+  const helpPopup = document.getElementById('helpPopup');
+  const helpIcon = document.getElementById('helpIcon');
+  if (!helpPopup.contains(event.target) && !helpIcon.contains(event.target)) {
+    helpPopup.classList.add('hidden');
+  }
+});
