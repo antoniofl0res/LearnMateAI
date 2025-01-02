@@ -12,6 +12,39 @@
     <div class="spinner"></div>
   </div>
 
+  <!-- Help Icon for Pop-up -->
+  <div id="helpIcon" onmouseover="showHelp()" onmouseout="hideHelp()">?</div>
+
+  <!-- Pop-up Help Window -->
+  <div id="helpPopup" class="hidden">
+    <h3>Welcome to LearnMateAI! 👋</h3>
+    <p>Let’s make your learning journey smooth and personalized! Here’s how to get started in just 3 easy steps:</p>
+    <ol>
+      <li><strong>Pick your topic</strong>: Type in the subject you’re excited to learn—whether it’s Python programming, digital marketing, or anything else. The more specific, the better!</li>
+      <li><strong>Tell us about you</strong>:
+        <ul>
+          <li><strong>Set your goal</strong>: What’s your endgame? Building a website? Mastering data analysis? Let us know!</li>
+          <li><strong>Choose your level</strong>: Are you a beginner, intermediate, or advanced learner?</li>
+          <li><strong>Pick your style</strong>: Do you prefer video tutorials or written content? We’ll tailor it just for you.</li>
+        </ul>
+      </li>
+      <li><strong>Get your custom curriculum</strong>: Hit “Generate Curriculum” and watch the magic happen! You’ll get:
+        <ul>
+          <li>A <strong>structured learning path</strong> with clear modules</li>
+          <li><strong>Trusted platforms</strong> to kickstart your learning</li>
+          <li><strong>Smart search keywords</strong> to dive deeper into the topic. Copy and paste them to search.</li>
+        </ul>
+      </li>
+    </ol>
+    <p><strong>💡 Pro Tips</strong>:
+      <ul>
+	<li>Save your curriculum by clicking the <strong>download button</strong>.</li>
+        <li>Need a fresh start? Click <strong>“Generate New Guide”</strong> to begin again.</li>
+      </ul>
+    </p>
+    <p>Happy learning! 🚀</p>
+  </div>
+
   <div class="container">
     <!-- Updated Title and Subtitle -->
     <h1>LearnMateAI</h1>
@@ -46,7 +79,6 @@
       <div id="curriculumOutput" class="curriculum"></div>
       <button onclick="downloadCurriculum()">Download Curriculum</button>
       <button onclick="resetForm()">Generate New Guide</button>
-</div>
     </div>
   </div>
   <script src="script.js"></script>

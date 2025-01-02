@@ -25,9 +25,9 @@ async function generateCurriculum() {
   document.getElementById('loading').classList.remove('hidden');
 
   // Create a prompt for OpenAI
-  const prompt = `Create a personalized learning curriculum for a learner who wants to learn ${topic} with a focus on ${goal}. The content must be specifically tailored to a ${knowledgeLevel} level of knowledge.
+  const prompt = `Create a personalized self-learning curriculum/guide for a learner who wants to learn ${topic} with a focus on ${goal}. The content must be specifically tailored to self-learning at a ${knowledgeLevel} level of knowledge.
 Include section with highly relevant, trusted, verified online ${learningStyle} platforms related to the topic ${topic} (present them as 'Try these platforms to get started').
-Provide 3 modules with clear titles and a list describing key themes to be covered in each module. At the end of each module include keywords presented in a boolean string (present them as "Suggested search"). Use no more than 300 tokens`;
+Provide 3 modules with clear titles and a list outlining key themes to be covered in each module. At the end of each module include keywords presented in a boolean string (present them as "Suggested search"). Use no more than 300 tokens`;
 
   try {
     // Call OpenAI API
@@ -108,3 +108,14 @@ function resetForm() {
   document.getElementById('knowledgeLevel').value = 'beginner';
   document.getElementById('learningStyle').value = 'videos';
 }
+
+// Show the help pop-up
+function showHelp() {
+  document.getElementById('helpPopup').classList.remove('hidden');
+}
+
+// Hide the help pop-up
+function hideHelp() {
+  document.getElementById('helpPopup').classList.add('hidden');
+}
+
